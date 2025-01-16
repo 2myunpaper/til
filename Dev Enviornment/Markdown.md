@@ -98,7 +98,7 @@ Markdown의 경우:
 Paragraph
 ```
 
-# 링크(link)와 이미지(image)
+### 링크(link)와 이미지(image)
 
 [Google](https://www.google.com)
 
