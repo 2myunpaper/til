@@ -108,46 +108,6 @@ Repository에는 최종적으로 포함된 파일들을 의미함.
 
 git은 로컬 저장소 내 **모든 파일의 ‘변경사항’**을 감시하고 있다.
 
-## 명령어
-
-git 명령어는 앞에 무조건 `git` 을 붙여줘야 함.
-
-`git init` : 현재 경로를 git으로 인해 관리되고 있는 폴더로 초기화해줌. 로컬 저장소를 초기화한다.
-
-`git status` : git에 관리되는 현재 저장소에 git 상황을 보여줌. (많이 사용될 예정)
-
-`git add sample.txt` : ‘sample.txt’ 를 staging area에 추가함.
-
-`git add sample.txt a.txt` : ‘sample.txt’, ‘a.txt’ 를 staging area에 추가함.
-
-`git commit -m "First commit"` : “First commit” 이라는 메세지를 남기며 staging area에 있는 파일들을 commit 함. (repository로 이동) 
-
-`git config --global [user.email](http://user.email) "dhk0420@naver.com"` , `git config --global [user.name](http://user.name) "dongdeng"` : git 사용자 설정
-
-`git config --global -l` : git global 설정 정보 보기
-
-`git log` : 지금까지 commit한 파일들의 log를 최근 순으로 나열한다.
-
-`git log --oneline` : commit 목록 한 줄로 보기
-
-모든 파일을 `commit`했는데, 만약 수정해줘야 하는 파일이 생겼다. 혹은 새로 생긴 파일이 생겼다.
-
-→ 이런 파일들도 다시 1. `add`  2. `commit`해주면 repository에 저장되는 것임.
-
-`git commit --amend` : 바로 직전 생성한 commit 메시지 수정, commit 전체 수정
-
-## 참고
-
-<aside>
-
-**로컬 (local)**
-
-현재 사용자가 직접 접속하고 있는 기기 또는 시스템
-
-개인 컴퓨터, 노트북, 태블릿 등 사용자가 직접 조작하는 환경
-
-</aside>
-
 git을 init한 폴더에서,
 
 그 안에 폴더를 만들어 그 폴더를 다시 init을 하는 것은 권장하지 않는다.
@@ -168,17 +128,11 @@ git을 init한 폴더에서,
 
 ※ 2020년 이후로 GitHub의 주 Branch는 master가 아니라 main으로 바뀌었다. *노예를 연상시킨대나 뭐래나..*
 
-`git remote add origin *링크*` : 현재 디렉토리를 *링크*  디렉토리에 원격 연결할 수 있게 해줌. *링크는* origin(단지 명칭)으로 설정
-
 <aside>
 
 **Push** : 현재 위치에 있는 모든 파일을 GitHub Repository에 add 하는 것
 
 </aside>
-
-`git push origin master` : origin 링크에 master branch로 push 한다.
-
-`git push -u origin master` : origin 링크와 master branch를 기본 경로 (`-u`)로 설정하여 push한다.
 
 **commit 이력이 없다면 push 할 수 없다!**
 
@@ -193,10 +147,6 @@ remote 링크는 1개 이상 설정해줄 수 있다.
 **Clone** : GitHub Repository으로 부터 전체 내용을 가져오는 것 (전체 다)
 
 </aside>
-
-`git pull origin master` : origin 링크에 master branch에 있는 내용을 끌어온다.
-
-`git clone *링크`* : 원격 git에 있는 모든 파일들을 복사해서 붙여넣는다.
 
 <aside>
 
@@ -225,3 +175,53 @@ GitHub에서 새로 Repository를 만들 때도 **.gitignore**을 만드는 설�
 그리고,
 
 **이미 git의 관리를 받은 이력이 있는 파일이나 디렉토리는 나중에 gitignore에 작성해도 적용되지 않음!**
+
+## 명령어
+
+git 명령어는 앞에 무조건 `git` 을 붙여줘야 함.
+
+`git init` : 현재 경로를 git으로 인해 관리되고 있는 폴더로 초기화해줌. 로컬 저장소를 초기화한다.
+
+`git status` : git에 관리되는 현재 저장소에 git 상황을 보여줌. (많이 사용될 예정)
+
+`git add sample.txt` : ‘sample.txt’ 를 staging area에 추가함.
+
+`git add sample.txt a.txt` : ‘sample.txt’, ‘a.txt’ 를 staging area에 추가함.
+
+`git commit -m "First commit"` : “First commit” 이라는 메세지를 남기며 staging area에 있는 파일들을 commit 함. (repository로 이동) 
+
+`git config --global [user.email](http://user.email) "dhk0420@naver.com"` , `git config --global [user.name](http://user.name) "dongdeng"` : git 사용자 설정
+
+`git config --global -l` : git global 설정 정보 보기
+
+`git log` : 지금까지 commit한 파일들의 log를 최근 순으로 나열한다.
+
+`git log --oneline` : commit 목록 한 줄로 보기
+
+※ 모든 파일을 `commit`했는데, 만약 수정해줘야 하는 파일이 생겼다. 혹은 새로 생긴 파일이 생겼다.
+
+→ 이런 파일들도 다시 1. `add`  2. `commit`해주면 repository에 저장되는 것임.
+
+`git commit --amend` : 바로 직전 생성한 commit 메시지 수정, commit 전체 수정
+
+`git remote add origin *링크*` : 현재 디렉토리를 *링크*  디렉토리에 원격 연결할 수 있게 해줌. *링크는* origin(단지 명칭)으로 설정
+
+`git push origin master` : origin 링크에 master branch로 push 한다.
+
+`git push -u origin master` : origin 링크와 master branch를 기본 경로 (`-u`)로 설정하여 push한다.
+
+`git pull origin master` : origin 링크에 master branch에 있는 내용을 끌어온다.
+
+`git clone *링크`* : 원격 git에 있는 모든 파일들을 복사해서 붙여넣는다.
+
+## 참고
+
+<aside>
+
+**로컬 (local)**
+
+현재 사용자가 직접 접속하고 있는 기기 또는 시스템
+
+개인 컴퓨터, 노트북, 태블릿 등 사용자가 직접 조작하는 환경
+
+</aside>
