@@ -6,8 +6,6 @@
 
 ## **실습 코드**
 
----
-
 ### **Markdown 연습**
 
 ```markdown
@@ -72,6 +70,7 @@ We are practicing markdown!!!
 마크다운을 이용해 (소스)코드를 표현하는 방법들
 
 **inline code block** : 문단 등의 내용 안에 일부분만 코드로 표현하는 방법: `git`, `python`, `vscode`
+```
 
 **code block** : 큰 영역에 코드를 작성하여 코드로 표현하는 방법
 ```
