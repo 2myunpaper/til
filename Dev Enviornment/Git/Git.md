@@ -220,7 +220,7 @@ git 명령어는 앞에 무조건 `git` 을 붙여줘야 함.
 
 `git pull origin master` : origin 링크에 master branch에 있는 내용을 끌어온다.
 
-`git clone *링크`* : 원격 git에 있는 모든 파일들을 복사해서 붙여넣는다.
+`git clone *링크*` : 원격 git에 있는 모든 파일들을 복사해서 붙여넣는다.
 
 `git remote -v` : 현재 로컬 저장소에 등록된 원격 저장소 목록 보기
 
