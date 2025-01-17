@@ -260,9 +260,9 @@ git 명령어는 앞에 무조건 `git` 을 붙여줘야 함.
 
 `git commit -m "First commit"` : “First commit” 이라는 메세지를 남기며 staging area에 있는 파일들을 commit 함. (repository로 이동) 
 
-`git config **--global** [user.email](http://user.email) "dhk0420@naver.com"` , `git config **--global** [user.name](http://user.name) "2myunpaper"` : git global 사용자 설정
+`git config **--global** user.email "dhk0420@naver.com"` , `git config **--global** user.name "2myunpaper"` : git global 사용자 설정
 
-`git config **--local** [user.email](http://user.email) "dhk0420@naver.com"` , `git config **--local** [user.name](http://user.name) "2myunpaper"` : 각 repository마다 다른 config 설정
+`git config **--local** user.email "dhk0420@naver.com"` , `git config **--local** user.name "2myunpaper"` : 각 repository마다 다른 config 설정
 
 `git config --global -l` : git global 설정 정보 보기
 
