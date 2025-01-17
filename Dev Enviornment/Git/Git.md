@@ -64,7 +64,7 @@ Git은 개발 과정에서 발생하는 이와 같은 원리로 효율적으로 
 
 실제 작업 중인 파일들이 위치하는 영역
 
-→ 그냥 파일들
+→ 그냥 파일들, 아직 기록되지 않은 파일들
 
 </aside>
 
@@ -100,7 +100,7 @@ Repository에는 최종적으로 포함된 파일들을 의미함.
 
 <aside>
 
-**Commit**
+**Commit (= 기여하다)**
 
 변경된 파일들을 저장하는 행위이며, 마치 사진을 찍듯이 기록한다 하여 ‘snapshot’ 이라고도 함.
 
@@ -148,6 +148,8 @@ remote 링크는 1개 이상 설정해줄 수 있다.
 
 </aside>
 
+### .gitignore
+
 <aside>
 
 **.gitignore** : git add, commit를 무시할 파일 목록들
@@ -176,6 +178,8 @@ GitHub에서 새로 Repository를 만들 때도 **.gitignore**을 만드는 설�
 
 **이미 git의 관리를 받은 이력이 있는 파일이나 디렉토리는 나중에 gitignore에 작성해도 적용되지 않음!**
 
+### Commit
+
 ## 명령어
 
 git 명령어는 앞에 무조건 `git` 을 붙여줘야 함.
@@ -190,7 +194,9 @@ git 명령어는 앞에 무조건 `git` 을 붙여줘야 함.
 
 `git commit -m "First commit"` : “First commit” 이라는 메세지를 남기며 staging area에 있는 파일들을 commit 함. (repository로 이동) 
 
-`git config --global [user.email](http://user.email) "dhk0420@naver.com"` , `git config --global [user.name](http://user.name) "dongdeng"` : git 사용자 설정
+`git config **--global** [user.email](http://user.email) "dhk0420@naver.com"` , `git config **--global** [user.name](http://user.name) "2myunpaper"` : git global 사용자 설정
+
+`git config **--local** [user.email](http://user.email) "dhk0420@naver.com"` , `git config **--local** [user.name](http://user.name) "2myunpaper"` : 각 repository마다 다른 config 설정
 
 `git config --global -l` : git global 설정 정보 보기
 
@@ -204,7 +210,9 @@ git 명령어는 앞에 무조건 `git` 을 붙여줘야 함.
 
 `git commit --amend` : 바로 직전 생성한 commit 메시지 수정, commit 전체 수정
 
-`git remote add origin *링크*` : 현재 디렉토리를 *링크*  디렉토리에 원격 연결할 수 있게 해줌. *링크는* origin(단지 명칭)으로 설정
+`git remote **add** origin *링크*` : 현재 디렉토리를 *링크*  디렉토리에 원격 연결할 수 있게 해줌. *링크는* origin(단지 명칭)으로 설정
+
+`git remote **seturl** origin 링크` : origin 로컬 저장소와 연결되는 링크를 재설정 함.
 
 `git push origin master` : origin 링크에 master branch로 push 한다.
 
@@ -213,6 +221,10 @@ git 명령어는 앞에 무조건 `git` 을 붙여줘야 함.
 `git pull origin master` : origin 링크에 master branch에 있는 내용을 끌어온다.
 
 `git clone *링크`* : 원격 git에 있는 모든 파일들을 복사해서 붙여넣는다.
+
+`git remote -v` : 현재 로컬 저장소에 등록된 원격 저장소 목록 보기
+
+`git remote rm *원격_저장소_이름(ex. origin)*` : 현재 로컬 저장소에 등록된 원격 저장소 삭제
 
 ## 참고
 
@@ -225,3 +237,5 @@ git 명령어는 앞에 무조건 `git` 을 붙여줘야 함.
 개인 컴퓨터, 노트북, 태블릿 등 사용자가 직접 조작하는 환경
 
 </aside>
+
+Git은 꾸준히 써봐야 해결 방법을 찾아갈 수 있다. 실전으로 경험해보자.
