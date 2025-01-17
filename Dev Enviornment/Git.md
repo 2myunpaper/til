@@ -92,7 +92,7 @@ Working Directory는 우리가 폴더에서 그냥 파일을 생성하는 것과
 
 Staging Area는 Working Directory의 일부분을 프로젝트에 포함할거야! 하는 추가될 파일들이다.
 
-*ex) 1~10 Working Directory에서 6~10을 추가할거야! → 6~10은 Staging Area*
+*ex) 1 ~ 10 Working Directory에서 6 ~ 10을 추가할거야! → 6 ~ 10은 Staging Area*
 
 Repository에는 최종적으로 포함된 파일들을 의미함.
 
