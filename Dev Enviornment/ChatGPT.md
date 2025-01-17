@@ -1,3 +1,7 @@
+## 참고
+
+[프롬프트 엔지니어링](https://www.notion.so/17d7900d53b680e09fb7c96c6f59b784?pvs=21) 
+
 ## 들어가기 전
 
 들어가기 전, AI의 역사 몇 가지를 알아보자.
@@ -158,9 +162,7 @@ ChatGPT에서 API key를 발급 받아 실습 해볼 수 있다.
 
 코드는 Private. 개인 드라이브 참고하기.
 
-**Drive**
-
-![](ChatGPT_models.png)
+[개인 드라이브](https://drive.google.com/drive/folders/1RtU-_v0WjeIBwv_P9KEn4VRqdsRcEB0f)
 
 *그러나 한정적으로 이용할 수 있고, 많이 이용하고 싶으면 ChatGPT에 돈 내야된다는 것은 안비밀.*
 
@@ -170,7 +172,7 @@ ChatGPT에서 API key를 발급 받아 실습 해볼 수 있다.
 
 [사용 가능한 모델](https://www.google.com/url?q=https%3A%2F%2Fplatform.openai.com%2Fdocs%2Fmodels%2Fgpt-4o)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a178b89c-3f2f-4b30-8878-a10ce48c15a4/92e9a0f6-50b1-411a-97a9-eb619df812cd/image.png)
+![image.png](ChatGPT_models.png)
 
 ### **필수 파라미터**
 
