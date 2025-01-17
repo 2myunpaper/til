@@ -160,7 +160,7 @@ ChatGPT에서 API key를 발급 받아 실습 해볼 수 있다.
 
 **Drive**
 
-[](ChatGPT_models.png)
+![](ChatGPT_models.png)
 
 *그러나 한정적으로 이용할 수 있고, 많이 이용하고 싶으면 ChatGPT에 돈 내야된다는 것은 안비밀.*
 
