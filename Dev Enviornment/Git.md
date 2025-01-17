@@ -220,7 +220,7 @@ Dev2는 push를 못하고, Dev2가 어쩔 수 없이 pull을 한다면 파일 �
 
 만약 2번째 commit을 revert해버린다면, **CONFLICT가 발생**한다.
 
-*그래서 강사님은 revert를 잘 사용안하신다고 한다 ㅎㅎ*
+~*그래서 강사님은 revert를 잘 사용안하신다고 한다 ㅎㅎ*~
 
 ### Reset
 
