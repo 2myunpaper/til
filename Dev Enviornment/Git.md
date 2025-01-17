@@ -114,6 +114,8 @@ git을 init한 폴더에서,
 
 ## Remote Respository
 
+---
+
 <aside>
 
 **원격 저장소**
@@ -176,9 +178,73 @@ GitHub에서 새로 Repository를 만들 때도 **.gitignore**을 만드는 설�
 
 그리고,
 
-**이미 git의 관리를 받은 이력이 있는 파일이나 디렉토리는 나중에 gitignore에 작성해도 적용되지 않음!**
+**이미 git의 관리를 받은 이력이 있는 파일이나 디렉토리는 나중에 gitignore에 작성해도 적용되지 않음!** → 이 문제는 `git rm --cached` 로 해결 가능
 
-### Commit
+그런데,
+
+Dev1, Dev2가 있다고 생각해보자.
+
+Dev1과 Dev2가 동시에 Clone을 해서 모든 파일을 받고,
+
+각각 코드를 편집하여 각각 add, commit을 했다.
+
+그리고 각자 push를 하려고 한다.
+
+그러면 어떻게 될까?
+
+만약 Dev1이 먼저 push를 했다면,
+
+Dev2는 push를 못하고, Dev2가 어쩔 수 없이 pull을 한다면 파일 내용이 이상하게 바뀐다.
+
+파일 내용에는 내가 고친 부분과, 이미 다른 사람이 push한 내용이 동시에 기록된다.
+
+이게 바로 git에서의 **CONFLICT**이다.
+
+이것을 보완하는 방법은, Dev2는 Dev1이 이미 Push한 내용을 합치고, 추가사항을 적어 내용을 합병시킨다. 그리고 add, commit, push를 하면 해결된다.
+
+*그러므로! pull을 항상 하는 것이 좋을 것이다~*
+
+참고로 **CONFLICT**는 push할 때만 발생하지 않고, 다른 경우도 있으니 경험으로 알아가보자!
+
+### Revert
+
+‘재설정’
+
+**특정 commit을 없던 일로 처리하며 그 결과를 새로운 commit으로 추가**한다.
+
+그러니 **단순히 지워버리는 개념은 아니다.**
+
+여기에서도 **CONFLICT**가 발생할 수 있다.
+
+예를 들어 한 파일을 1번째, 2번째, 3번째 과정을 통해 add, commit이 되었다.
+
+만약 2번째 commit을 revert해버린다면, **CONFLICT가 발생**한다.
+
+*그래서 강사님은 revert를 잘 사용안하신다고 한다 ㅎㅎ*
+
+### Reset
+
+‘없던 일로 하자’
+
+**특정 commit으로 돌아가는 작업**, 과거로 돌리는 듯한 행위
+
+<aside>
+
+`--soft` : 삭제된 commit의 기록을 staging area에 남김
+
+→ commit만 사라지고, add가 된 상태까지
+
+`—-mixed` : 삭제된 commit의 기록을 working directory에 남김 (기본 옵션 값)
+
+→ 파일은 그대로 유지, add가 되지 않은 상태까지
+
+`--hard` : commit의 기록도 삭제, commit에 해당되는 수정사항도 다 reset.
+
+→ 파일도 reset
+
+</aside>
+
+그런데, push가 된 commit을 reset하는 것은? → *비추!비추!*
 
 ## 명령어
 
@@ -212,7 +278,7 @@ git 명령어는 앞에 무조건 `git` 을 붙여줘야 함.
 
 `git remote **add** origin *링크*` : 현재 디렉토리를 *링크*  디렉토리에 원격 연결할 수 있게 해줌. *링크는* origin(단지 명칭)으로 설정
 
-`git remote **seturl** origin 링크` : origin 로컬 저장소와 연결되는 링크를 재설정 함.
+`git remote **seturl** origin *링크*` : origin 로컬 저장소와 연결되는 링크를 재설정 함.
 
 `git push origin master` : origin 링크에 master branch로 push 한다.
 
@@ -220,11 +286,17 @@ git 명령어는 앞에 무조건 `git` 을 붙여줘야 함.
 
 `git pull origin master` : origin 링크에 master branch에 있는 내용을 끌어온다.
 
-`git clone *링크*` : 원격 git에 있는 모든 파일들을 복사해서 붙여넣는다.
+`git clone *링크*` : 원격 git에 있는 모든 파일들을 복사해서 붙여넣는다. clone으로 받은 프로젝트는 이미 git init이 되어 있음.
 
 `git remote -v` : 현재 로컬 저장소에 등록된 원격 저장소 목록 보기
 
 `git remote rm *원격_저장소_이름(ex. origin)*` : 현재 로컬 저장소에 등록된 원격 저장소 삭제
+
+`git revert *commit_ID(구분할 수 있을 정도만)*` : revert 명령어
+
+`git revert **--no-edit** *commit_ID*` : edit 없이 revert 실행
+
+`git reset [옵션] *commit_ID*` : reset 명령어, [옵션]이 추가됨. (`--soft` , `--mixed` , `--hard`)
 
 ## 참고
 
@@ -239,3 +311,5 @@ git 명령어는 앞에 무조건 `git` 을 붙여줘야 함.
 </aside>
 
 Git은 꾸준히 써봐야 해결 방법을 찾아갈 수 있다. 실전으로 경험해보자.
+
+그리고 git status를 잘 살피고, 검색해서 필요한 명령문을 찾으면 된다!
