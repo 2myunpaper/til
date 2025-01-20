@@ -10,6 +10,8 @@
 
 > **25-01-17** [Git](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/Git.md) 수정, [ChatGPT](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/ChatGPT.md) 추가
 
+> **25-01-20** 
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
