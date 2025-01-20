@@ -10,7 +10,7 @@
 
 > **25-01-17** [Git](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/Git.md) 수정, [ChatGPT](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/ChatGPT.md) 추가
 
-> **25-01-20** 
+> **25-01-20** [Python_Basic_Syntax](https://github.com/2myunpaper/til/blob/master/Python/Basic_Syntax/Basic_Syntax_01.md) 추가
 
 ## Year Plan (2025)
 
