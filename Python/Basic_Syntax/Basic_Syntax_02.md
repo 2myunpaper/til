@@ -129,6 +129,12 @@ name, age, major = student  # 언패킹
 print(name, age, major)  # Kim 20 CS
 ```
 
+```python
+# warning
+result = 100,
+print(type(result))  # tuple -> 값이 변할 수 없음.
+```
+
 ### range
 
 **연속된 정수 시퀀스를 생성**하는 **변경 불가능**한 자료형
@@ -229,7 +235,7 @@ print(my_set_3)  # {1}
 중복이 허용되지 않는 자료형이기 때문에, 아래와 같이 집합 연산이 가능하다.
 
 ```python
-# 세트의 집합 연산산
+# 세트의 집합 연산
 my_set_1 = {1, 2, 3}
 my_set_2 = {3, 6, 9}
 
@@ -245,7 +251,7 @@ print(my_set_1 & my_set_2)  # {3}
 
 ## Other Types
 
-### None
+### None (Python의 null)
 
 파이썬에서 **‘값이 없음’**을 표현하는 자료형
 
@@ -328,6 +334,8 @@ print(str(1) + '등')  # 1등
 ```
 
 *명시적 형변환은 프로그래밍을 계속 해보면서 알아가는 것이 최고임! ~~(다 못외움 ㅎㅎ)~~*
+
+대부분 `str` 으로 형변환이 가능하다!
 
 ## 연산자
 
@@ -467,12 +475,15 @@ print(('b' and 'a') in vowels)  # True -> 'a' in vowels
 print(3 and 5)  # 5
 print(3 and 0)  # 0
 print(0 and 3)  # 0
-print(0 and 0)  # 0
+print(0 and 0)  # 0, 앞의 0에서 끝남.
 
 print(5 or 3)  # 5
 print(3 or 0)  # 3
 print(0 or 3)  # 3
-print(0 or 0)  # 0
+print(0 or 0)  # 0, 뒤의 0에서 끝남.
+
+# 0은 False로, 0이 아닌 숫자는 다 True로 인식함.
+# 그러나 True와 같은 정수는 1이다!
 ```
 
 ### 멤버십 연산자
@@ -540,4 +551,83 @@ config = {'host': 'localhost', 'port': 8080, 'debug': True,}
 # 한 줄 작성 시에는 불필요
 items = ['item1', 'item2', 'item3']
 config = {'host': 'localhost', 'port': 8080, 'debug': True}
+```
+
+### list Copy
+
+```python
+list_A = [a, b, c]
+list_B = list_A
+```
+
+만약 이런 식으로 한다면, `list_B` 는 `list_A` 가 가리키는 주소 값만 같게 함으로, 완벽히 복사 된 것이라고 볼 수 없다.
+
+그러면 내용은 그대로 복사하고, 각각의 list에서 수정할 수 있게 하려면 어떻게 해야 될까?
+
+종류는 아래와 같다.
+
+<aside>
+
+**shallow copy (얕은 복사)**
+
+내용을 복사한다. 각각의 list를 연장하거나 줄여도 따로 이루어진다. 허나, 기존 내용을 수정하는 것은 동시에 바뀌어 따로 이루어지지 않는다.
+
+**deep copy (깊은 복사)**
+
+내용을 복사한다. 복사 된 값들은 동일한 값으로 할당되어 있으나, 각각의 list는 완벽하게 따로 수정할 수 있다.
+
+</aside>
+
+**deep copy**는 메모리를 많이 사용하는 복사이기 때문에 상황에 따라 **shallow copy**를 사용하는 것도 중요하다.
+
+**shallow copy**
+
+```python
+list_A = ["ABC","DEF"]
+
+list_B = list_A.copy()  # 1번 방법
+list_B = list_A[:]		# 2번 방법
+
+list_B.append("GHI")
+
+print(list_B)
+#결과 ["ABC","DEF","GHI"]
+
+print(list_A)
+#결과 ["ABC","DEF"]
+```
+
+```python
+list_A = ["ABC",["DEF","GHI"]]
+
+list_B = list_A.copy()  # 1번 방법
+list_B = list_A[:]		# 2번 방법
+
+list_B[1][0] = ["GHI"]
+
+print(list_A, list_B)
+# 결과 ['ABC', [['GHI'], 'GHI']] ['ABC', [['GHI'], 'GHI']]
+# 기존 내용을 수정할 경우 둘 다 수정된다. 따로 수정이 되지 않는다.
+```
+
+**deep copy**
+
+```python
+import copy  # copy 라이브러리 가져오기
+
+list_A = ["ABC",["DEF","GHI"]]
+
+list_B = copy.deepcopy(list_A)
+
+list_B[1][0] = ["GHI"]
+
+print(list_A, list_B)
+#결과 ['ABC', ['DEF', 'GHI']] ['ABC', [['GHI'], 'GHI']]
+
+print(list_A is list_B)
+## >>> False
+print(list_A[0] is list_B[0])
+## >>> True
+print(list_A[1] is list_B[1])
+## >>> False
 ```

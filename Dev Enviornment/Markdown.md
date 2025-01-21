@@ -100,6 +100,7 @@ Paragraph
 
 ### 링크(link)와 이미지(image)
 
+```md
 [Google](https://www.google.com)
 
 [Naver](https://www.naver.com)
@@ -125,8 +126,7 @@ Python 트랙 공유 문서 [링크](https://abit.ly/pb-document)
 ---
 
 ---
-
-
+```
 
 ### **자기소개 Markdown**
 
