@@ -12,7 +12,7 @@
 
 > **25-01-20** [Python_Basic_Syntax_1](https://github.com/2myunpaper/til/blob/master/Python/Basic_Syntax/Basic_Syntax_01.md) 추가
 
-> **25-01-21** [Python_Basic_Syntax_2]
+> **25-01-21** [Python_Basic_Syntax_2](https://github.com/2myunpaper/til/blob/master/Python/Basic_Syntax/Basic_Syntax_02.md) 추가
 
 ## Year Plan (2025)
 
