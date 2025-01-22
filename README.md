@@ -14,6 +14,8 @@
 
 > **25-01-21** [Python_Basic_Syntax_2](https://github.com/2myunpaper/til/blob/master/Python/Basic_Syntax/Basic_Syntax_02.md) 추가, [Markdown](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/Markdown.md) 수정
 
+> **25-01-22** [Python_Functions](https://github.com/2myunpaper/til/blob/master/Python/Functions.md) 추가, [Python_Basic_Syntax_2](https://github.com/2myunpaper/til/blob/master/Python/Basic_Syntax/Basic_Syntax_02.md) shallow copy, deep copy 부분 수정
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
