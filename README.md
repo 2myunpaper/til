@@ -18,6 +18,8 @@
 
 > **25-01-23** [Python_Modules_and_Control_of_Flow](https://github.com/2myunpaper/til/blob/master/Python/Modules_and_Control_of_Flow.md) 추가
 
+> **25-01-24** [SOLID](https://github.com/2myunpaper/til/blob/master/Dev_Enviornment/SOLID.md) 추가
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
