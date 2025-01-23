@@ -433,6 +433,10 @@ for num in numbers:
 """
 ```
 
+### 참고
+
+`in` : 리스트에 있나 없나 판별하는 명령어
+
 ## List comprehension (리스트 표현식)
 
 간결하고 효율적인 리스트 생성 방법
