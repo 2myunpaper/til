@@ -18,7 +18,7 @@
 
 > **25-01-23** [Python_Modules_and_Control_of_Flow](https://github.com/2myunpaper/til/blob/master/Python/Modules_and_Control_of_Flow.md) 추가
 
-> **25-01-24** [SOLID](https://github.com/2myunpaper/til/blob/master/Dev_Enviornment/SOLID.md) 추가
+> **25-01-24** [Python_Data_Structure](https://github.com/2myunpaper/til/blob/master/Python/Basic_Syntax/Data_Structure.md), [SOLID](https://github.com/2myunpaper/til/blob/master/Dev_Enviornment/SOLID.md) 추가, [Python_Functions](https://github.com/2myunpaper/til/blob/master/Python/Functions.md) print() 관련 내용 추가
 
 ## Year Plan (2025)
 
