@@ -20,6 +20,8 @@
 
 > **25-01-24** [Python_Data_Structure](https://github.com/2myunpaper/til/blob/master/Python/Data_Structure.md), [SOLID](https://github.com/2myunpaper/til/blob/master/Dev_Enviornment/SOLID.md) 추가, [Python_Functions](https://github.com/2myunpaper/til/blob/master/Python/Functions.md) print() 관련 내용 추가
 
+> **25-01-31** [PJT01](https://github.com/2myunpaper/til/blob/master/관통프로젝트/PJT01.md) 추가, [Python_Data_Structure](https://github.com/2myunpaper/til/blob/master/Python/Data_Structure.md) 내용 추가
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
