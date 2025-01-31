@@ -245,6 +245,152 @@ print(my_list)  # [100, 3, 2, 1]
 
 *~~전공서적처럼 보이는~~ 사이트를 두려워 하지 말고, 가벼운 마음으로 찾고자 하는 것만 발견하자!*
 
+## 비시퀀스 데이터 구조
+
+### 딕셔너리 메서드
+
+`clear()` , `get(k)` , `get(k, v)` , `keys()` , `values()` , `items()` , `pop(k)` , `pop(k, v)` , `setdefault(k)` , `setdefault(k, v)` , `update(other)` 
+
+```python
+# clear : 딕셔너리의 모든 키/값 쌍을 제거
+person = {'name': 'Alice', 'age': 25}
+person.clear()
+print(person)  # {}
+
+# get : 키에 연결된 값을 반환
+person = {'name': 'Alice', 'age': 25}
+print(person.get('name'))  # Alice
+print(person.get('country'))  # None, 키가 없으면 None을 반환
+print(person.get('country', 'Unknown'))  # Unknown, 키가 없으면 기본 값을 반환
+# print(person['country'])  # KeyError: 'country'
+
+# keys : 키를 모은 객체를 반환
+person = {'name': 'Alice', 'age': 25}
+print(person.keys())  # dict_keys(['name', 'age'])
+for item in person.keys():
+    print(item)
+"""
+name
+age
+"""
+
+# values : 값을 모은 객체를 반환
+person = {'name': 'Alice', 'age': 25}
+print(person.values())  # dict_values(['Alice', 25])
+for item in person.values():
+    print(item)
+"""
+Alice
+25
+"""
+
+# items : 키/값 쌍을 모은 객체를 반환
+person = {'name': 'Alice', 'age': 25}
+print(person.items())  # dict_items([('name', 'Alice'), ('age', 25)])
+for key, value in person.items():
+    print(key, value)
+"""
+name Alice
+age 25
+"""
+
+# pop : 키를 제거하고 연결됐던 값을 반환
+person = {'name': 'Alice', 'age': 25}
+print(person.pop('age'))  # 25
+print(person)  # {'name': 'Alice'}
+print(person.pop('country', None))  # None
+# print(person.pop('country'))  # KeyError: 'country'
+
+# setdefault : 키와 연결된 값을 반환
+person = {'name': 'Alice', 'age': 25}
+print(person.setdefault('country', 'KOREA'))
+# KOREA, 키가 없으면 값과 연결한 키를 추가하고 값을 반환
+print(person)  # {'name': 'Alice', 'age': 25, 'country': 'KOREA'}
+
+# update : 각 키의 값을 업데이트함. 키가 없다면 키를 새로 추가하여 값을 부여함.
+person = {'name': 'Alice', 'age': 25}
+other_person = {'name': 'Jane', 'country': 'KOREA'}
+
+person.update(other_person)
+print(person)  # {'name': 'Jane', 'age': 25, 'country': 'KOREA'}
+
+person.update(age=100, address='SEOUL')
+print(
+    person
+)  # {'name': 'Jane', 'age': 100, 'country': 'KOREA', 'address': 'SEOUL'}
+```
+
+※ update는 주소 재 할당이 아니라 그대로 복사하는 것이라고 생각하면 된다.
+
+```python
+a.update(b)
+print(a)  # {'name': 'Alice', 'age': 25}
+b['name'] = 'Bella'
+print(a)  # {'name': 'Alice', 'age': 25}
+print(b)  # {'name': 'Bella', 'age': 25}
+```
+
+### 세트 메서드
+
+고유한 항목들의 정렬되지 않은 컬렉션 `{` , `}` 로 나타내고, 빈 세트는 `set()` 로 나타냄.
+
+`add(x)` , `clear()` , `remove(x)` , `pop()` , `discard(x)` , `update(iterable)`
+
+```python
+# add : 세트에 항목을 추가. 이미 있다면 변화 없음.
+my_set = {'a', 'b', 'c', 1, 2, 3}
+my_set.add(4)
+print(my_set)  # {'a', 1, 2, 3, 'b', 4, 'c'}
+
+my_set.add(4)
+print(my_set)  # {'a', 1, 2, 3, 'b', 4, 'c'}
+
+# clear : 세트의 모든 항목을 제거
+my_set = {'a', 'b', 'c', 1, 2, 3}
+my_set.clear()
+print(my_set)  # set()
+
+# remove : 세트에서 항목을 제거. 항목이 없을 경우 Key error
+my_set = {'a', 'b', 'c', 1, 2, 3}
+my_set.remove(2)
+print(my_set)  # {'a', 1, 3, 'b', 'c'}
+# my_set.remove(10)  # KeyError: 10
+
+# pop : 세트에서 임의의 항목을 반환하고, 해당 항목을 제거함.
+my_set = {'a', 'b', 'c', 1, 2, 3}
+element = my_set.pop()
+print(element)  # a
+
+# discard : 세트에서 항목을 제거
+my_set = {'a', 'b', 'c', 1, 2, 3}
+my_set.discard(2)
+print(my_set)  # {1, 3, 'a', 'b', 'c'}
+my_set.discard(10)  # 아무런 일도 일어나지 않는다.
+
+# update : 세트에 다른 iterable 요소를 추가함
+my_set = {'a', 'b', 'c', 1, 2, 3}
+my_set.update([1, 4, 5])
+print(my_set)  # {'c', 2, 3, 1, 'b', 4, 5, 'a'}
+```
+
+### 세트의 집합 메서드
+
+`difference()` , `intersection()` , `issubset()` , `issuperset()` , `union()`
+
+```python
+# 집합 메서드
+set1 = {0, 1, 2, 3, 4}
+set2 = {1, 3, 5, 7, 9}
+set3 = {0, 1}
+
+print(set1.difference(set2))  # {0, 2, 4}, 차집합 : set1 - set2
+print(set1.intersection(set2))  # {1, 3}, 교집합 : set1 & set2
+print(set1.issubset(set2))  # False, 부분집합 여부 : set1 <= set2
+print(set3.issubset(set1))  # True, 부분집합 여부 : set3 <= set1
+print(set1.issuperset(set2))  # False, 부분집합 여부 : set1 >= set2
+print(set1.union(set2))  # {0, 1, 2, 3, 4, 5, 7, 9}, 합집합 : set1 | set2
+```
+
 ## 복사
 
 코딩을 할 때, 복사와 재할당을 헷갈릴 때가 있다.
@@ -465,3 +611,127 @@ print(sorted_numbers)  # [1, 1, 2, 3, 4, 5, 9]
 `isdigit()` 과 유사하지만, 몇 가지 추가적인 유니코드 문자들을 인식 (분수, 지수, 루트 기호도 숫자로 인식)
 
 </aside>
+
+### 해시 테이블
+
+해시 함수를 사용하여 변환한 값을 인덱스로 삼아 키(Key)와 데이터(value)를 저장하는 자료구조
+
+→ 데이터를 빠르게 저장하고 검색하기 위해 사용된다.
+
+<aside>
+
+**해시 (Hash)**
+
+임의의 크기를 가진 데이터를 고정된 크기의 고유한 값으로 변환하는 것
+
+생성된 **해시 값(고유한 정수)**은 해당 데이터를 식별하는 ‘지문’ 역할을 한다.
+
+파이썬에서는 이 해시 값을 이용해 해시 테이블에 데이터를 저장한다.
+
+**해시 함수 (Hash function)** = 해시 알고리즘
+
+임의의 길이 데이터를 입력 받아 고정 길이로 변환해 주는 함수이다.
+
+주로 해시 테이블을 구현할 , 매우 빠른 검색을 위해 활용한다.
+
+</aside>
+
+해시 테이블의 원리는 아래와 같다.
+
+<aside>
+
+1. 키를 해시 함수를 통해 해시 값으로 변환한다. (이름 등을 숫자로 나타낸다고 이해하면 됨.)
+2. 변환된 해시 값을 인덱스로 삼아 데이터를 저장하거나 찾는다.
+3. 이로 인해 검색, 삽입, 삭제 가 매우 빠르게 수행된다.
+</aside>
+
+```python
+# 정수 : 정수값은 해시 값이 숫자 자기 자신과 동일하거나 단순 계산으로 고정됨.
+my_set = {3, 2, 1, 9, 100, 4, 87, 39, 10, 52}
+print(my_set.pop())
+print(my_set.pop())
+print(my_set.pop())
+print(my_set.pop())
+print(my_set.pop())
+print(my_set.pop())
+print(my_set.pop())
+print(my_set.pop())
+print(my_set.pop())
+print(my_set.pop())
+print(my_set)
+
+# 문자열 : 난수 시드 값이 실행 때마다 달라지므로, 결과가 다르게 나올 수 있다.
+my_str_set = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'}
+print(my_str_set.pop())
+print(my_str_set.pop())
+print(my_str_set.pop())
+print(my_str_set.pop())
+print(my_str_set.pop())
+```
+
+해시 값이 적용되는 `set` 과 `dict` 의 차이를 알아보자.
+
+`set`은 각 요소를 해시 함수로 변환해 나온 해시 값에 맞춰 해시 테이블 내부 버킷에 위치시킨다.
+
+그래서 순서라기보다 버킷 위치가 요소의 위치를 결정한다. 따라서 `set`은 순서를 보장하지 않는 것이다.
+
+`dict` 은 키 → 해시 함수 → 해시 값 → 해시 테이블 순으로 저장된다.
+
+`set` 과 달리, 삽입 순서는 유지한다는 것이 특징이다. *(python 3.7 이상부터 적용됨)*
+
+즉, 키를 추가한 순서대로 반복문 순회할 때 나오게 되고, 사용자에게 보여지는 키 순서는 삽입 순서가 유지되도록 설계된 것이다.
+
+해시 함수가 적용되는 정수와 문자열을 확인해보자.
+
+```python
+print(hash(1))  # 1
+print(hash(1))  # 1
+print(hash('a'))  # 실행시마다 다르다.
+print(hash('a'))  # 실행시마다 다르다.
+```
+
+정수는 항상 같은 해시 값을 가지지만,
+
+문자열은 파이썬 인터프리터 시작 때 설정되는 **난수**가 달라지기에, 실행 때 마다 해시 값이 달라진다.
+
+→ 해시 함수가 매번 바뀌는 것이 아니라, 해시 계산에 쓰이는 **시드 값**이 실행마다 달라지는 것이다.
+
+결과적으로, 버킷 배치가 달라진다.
+
+→ `set` 에서 `pop()` 을 할 때 결과가 달라지는 이유
+
+### hashable
+
+<aside>
+
+**hashable**
+
+hash() 함수에 넣어 해시 값을 구할 수 있는 객체를 의미
+
+대부분의 불변 타입은 해시 가능 ex) `int` , `float` , `str` , `tuple` (내부의 불변만 있을 경우)
+
+가변형 객체 ex) `list` , `dict` , `set` 는 기본적으로 해시 불가능
+
+</aside>
+
+hashable 객체가 필요한 이유는,
+
+1. 해시 테이블 기반 자료 구조 사용 → set의 요소, dict의 키, 중복 방지 & 빠른 검색 및 조회 가능
+2. 불변성을 통한 일관된 해시 값 → 한 번 해시 값이 정해지면 바뀌지 않아야 해시 테이블 무결성이 유진된다.
+3. 안정성과 예측 가능성 유지
+
+```python
+print(hash(1))
+print(hash(1.0))
+print(hash('1'))
+print(hash((1, 2, 3)))
+
+# TypeError: unhashable type: 'list'
+# print(hash((1, 2, [3, 4])))
+# TypeError: unhashable type: 'list'
+# print(hash([1, 2, 3]))
+# TypeError: unhashable type: 'list'
+# my_set = {[1, 2, 3], 1, 2, 3, 4, 5}
+# TypeError: unhashable type: 'set'
+# my_dict = {{3, 2}: 'a'}
+```
