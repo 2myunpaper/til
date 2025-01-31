@@ -20,7 +20,7 @@
 
 > **25-01-24** [Python_Data_Structure](https://github.com/2myunpaper/til/blob/master/Python/Data_Structure.md), [SOLID](https://github.com/2myunpaper/til/blob/master/Dev_Enviornment/SOLID.md) 추가, [Python_Functions](https://github.com/2myunpaper/til/blob/master/Python/Functions.md) print() 관련 내용 추가
 
-> **25-01-31** [PJT01(데이터_가져오기)](https://github.com/2myunpaper/til/blob/master/관통프로젝트/PJT01(데이터_가져오기).md) 추가, [Python_Data_Structure](https://github.com/2myunpaper/til/blob/master/Python/Data_Structure.md) 내용 추가
+> **25-01-31** [PJT01(데이터_가져오기)](https://github.com/2myunpaper/til/blob/master/관통프로젝트/PJT01(데이터_가져오기).md) 추가, [Python_Data_Structure](https://github.com/2myunpaper/til/blob/master/Python/Data_Structure.md) 비시퀀스 데이터, 해시테이블 내용 추가
 
 ## Year Plan (2025)
 
