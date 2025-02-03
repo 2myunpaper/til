@@ -22,6 +22,8 @@
 
 > **25-01-31** [PJT01(데이터_가져오기)](https://github.com/2myunpaper/til/blob/master/관통프로젝트/PJT01(데이터_가져오기).md) 추가, [Python_Data_Structure](https://github.com/2myunpaper/til/blob/master/Python/Data_Structure.md) 비시퀀스 데이터, 해시테이블 내용 추가
 
+> **25-02-03** [Python_OOP_1](https://github.com/2myunpaper/til/blob/master/Python/OOP/OOP_1.md) 추가 
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
