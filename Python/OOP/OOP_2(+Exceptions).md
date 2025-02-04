@@ -1,5 +1,6 @@
 ## 상속
 
+
 한 클래스(부모)의 속성과 메서드를 다른 클래스(자식)가 물려받는 것
 
 상속이 필요한 이유는, **코드 재사용, 계층 구조, 유지 보수의 용이성**를 위해서이다.
@@ -103,7 +104,26 @@ class Student:
 그래서 상속 개념을 적용하면, 세부적인 특징을 담을 뿐더러, 중복적 코딩을 할 필요가 없어진다.
 
 ```python
+# 상속을 사용한 계층구조 변경
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
+    def talk(self):  # 메서드 재사용
+        print(f'반갑습니다. {self.name}입니다.')
+
+class Professor(Person):
+    def __init__(self, name, age, department):
+        self.name = name
+        self.age = age
+        self.department = department
+
+class Student(Person):
+    def __init__(self, name, age, gpa):
+        self.name = name
+        self.age = age
+        self.gpa = gpa
 ```
 
 ### 메서드 오버라이딩
