@@ -24,7 +24,7 @@
 
 > **25-02-03** [Python_OOP_1](https://github.com/2myunpaper/til/blob/master/Python/OOP/OOP_1.md) 추가 
 
-> **25-02-04** [Python_OOP_2(+Exceptions)](https://github.com/2myunpaper/til/blob/master/Python/OOP/OOP_2(+Exceptions).md) 추가
+> **25-02-04** [Python_OOP_2(+Exceptions)](https://github.com/2myunpaper/til/blob/master/Python/OOP/OOP_2(+Exceptions).md), [Redis](https://github.com/2myunpaper/til/blob/master/Dev_Enviornment/Redis.md) 추가
 
 ## Year Plan (2025)
 
