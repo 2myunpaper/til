@@ -184,8 +184,8 @@ ex)
 
 ```python
 def bubblesort(a, N)
-		for i in range(N-1, 0, -1):  # 정렬할 구간의 끝
-				for j in range(i):  # 비교할 원소 중 왼쪽 원소의 인덱스(0부터 구간 마지막 인덱스-1)
-						if a[j] > a[j+1]:  # 왼쪽 원소가 더 크면
-								a[j], a[j+1] = a[j+1], a[j]  # 오른쪽 원소와 교환
+    for i in range(N-1, 0, -1):  # 정렬할 구간의 끝
+		for j in range(i):  # 비교할 원소 중 왼쪽 원소의 인덱스(0부터 구간 마지막 인덱스-1)
+			if a[j] > a[j+1]:  # 왼쪽 원소가 더 크면
+				a[j], a[j+1] = a[j+1], a[j]  # 오른쪽 원소와 교환
 ```
