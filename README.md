@@ -26,7 +26,8 @@
 
 > **25-02-04** [Python_OOP_2(+Exceptions)](https://github.com/2myunpaper/til/blob/master/Python/OOP/OOP_2(+Exceptions).md), [Redis](https://github.com/2myunpaper/til/blob/master/Dev_Enviornment/Redis.md) 추가
 
-> **25-02-05** [List](https://github.com/2myunpaper/til/blob/master/Python/Algorithm/List.md) 추가
+> **25-02-05** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/List.md) 추가
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격

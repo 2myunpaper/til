@@ -34,12 +34,6 @@
 
 | **알고리즘 1** | **알고리즘 2** |
 | --- | --- |
-| def CalcSum(n):
-  sum ← 0  # 1번
-  for i in range (1, n+1):  #n번
-    sum ← sum + i  #n번
-  return sum | def CalcSum(n):
-  return n*(n+1)//2 |
 | 1 + n*2 = 2n + 1 | 3번의 연산 |
 
 작업량을 보면 알고리즘1이 더 많은 것을 확인할 수 있다.
