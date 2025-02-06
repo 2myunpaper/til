@@ -28,6 +28,8 @@
 
 > **25-02-05** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/List.md) 추가
 
+> **25-02-06** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/List.md) 내용 추가(카운팅 정렬, Greedy)
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
