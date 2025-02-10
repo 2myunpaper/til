@@ -32,6 +32,8 @@
 
 > **25-02-07** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/List.md) 내용 추가(2차원 배열, Delta, 비트 연산자 등)
 
+> **25-02-10** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/List.md) 내용 추가(검색, 이진탐색, 선택 정렬)
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
