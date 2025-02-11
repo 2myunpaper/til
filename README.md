@@ -34,6 +34,8 @@
 
 > **25-02-10** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/List.md) 내용 추가(검색, 이진탐색, 선택 정렬)
 
+> **25-02-11** [String](https://github.com/2myunpaper/til/blob/master/Algorithm/String.md) 추가
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
