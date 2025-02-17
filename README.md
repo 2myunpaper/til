@@ -42,6 +42,8 @@
 
 > **25-02-14** [Stack&Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack%20%26%20Queue.md) 내용 추가
 
+> **25-02-17** [Stack&Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack%20%26%20Queue.md) Backtracking, 계산기 내용 추가
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
