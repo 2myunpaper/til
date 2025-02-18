@@ -605,3 +605,213 @@ stack [ **-9** ]
 백트래킹 기법으로 **powerset**을 만들어 보자.
 
 *예전에 앞에서 봤던 이진법을 이용하는 내용이 적용되는 것 같다.*
+
+## 순열1
+
+단순하게 순열을 생성하는 방법은 아래와 같이 표현할 수 있을 것이다.
+
+<aside>
+
+*ex)* 집합 (1, 2, 3}에서 모든 순열을 생성하는 함수
+
+동일한 숫자가 포함되지 않았을 때, 각 자리 수 별로 loop를 이용해 구현할 수 있다.
+
+```python
+for i1 in range(1, 4):
+		for i2 in range(1, 4):
+				if i2 != i1:
+						for i3 in range(1, 4):
+								if i3 != i1 and i3 != i2:
+										print(i1, i2, i3)
+```
+
+</aside>
+
+백트래킹을 이용하여 {1, 2, 3, …, NMAX}에 대한 순열을 구해보자.
+
+아래 코드와 위의 코드를 비교해보자.
+
+```python
+def backtrack(a, k, n):  # a 주어진 배열, k 결정할 원소, n 원소 개수
+    c = [0] * MAXCANDIDATES
+
+    if k == n:
+        process_solution(a, k)  # 답이면 원하는 작업을 한다
+    else:
+        ncandidates = construct_candidates(a, k, n, c)
+        for i in range(ncandidates):
+            a[k] = c[i]
+            backtrack(a, k + 1, n)
+            
+def construct_candidates(a, k, n, c):   # 후보 추천천
+    c[0] = True                             # 원소의 포함 여부 
+    c[1] = False
+    return 2
+
+def process_solution(a, k):
+    for i in range(k):
+        if a[i]:
+            print(num[i], end = ' ')
+    print()
+
+MAXCANDIDATES = 2
+NMAX = 4
+a = [0] * NMAX
+num = [1,2,3,4]
+backtrack(a, 0, 3)
+```
+
+```python
+def backtrack(a, k, n):
+    c = [0] * MAXCANDIDATES
+
+    if k == n:
+        for i in range(0, k):
+            print(a[i], end=" ")
+        print()
+    else:
+        ncandidates = construct_candidates(a, k, n, c)
+        for i in range(ncandidates):
+            a[k] = c[i]
+            backtrack(a, k + 1, n)
+
+def construct_candidates(a, k, n, c):
+    in_perm = [False] * (NMAX + 1)
+
+    for i in range(k):
+        in_perm[a[i]] = True
+
+    ncandidates = 0
+    for i in range(1, NMAX + 1):
+        if in_perm[i] == False:
+            c[ncandidates] = i
+            ncandidates += 1
+    return ncandidates
+
+MAXCANDIDATES = 3
+NMAX = 3
+a = [0]*NMAX
+backtrack(a, 0, 3)
+
+```
+
+## 가지치기
+
+```python
+def f(i, k, s, t):  # i원소, k 집합의 크기, s i-1까지 고려된 합, t목표
+    global cnt
+    global fcnt
+    fcnt += 1
+    if s > t:   # 고려한 원소의 합이 찾는 합보다 큰경우
+        return
+    elif s == t:    # 남은 원소를 고려할 필요가 없는 경우
+        cnt += 1
+        return
+    elif i == k:    # 모든원소 고려
+        return
+    else:
+        bit[i] = 1
+        f(i+1, k, s+A[i], t)    # A[i] 포함
+        bit[i] = 0
+        f(i+1, k, s, t)         # A[i] 미포함
+
+#A = [1,2,3,4,5,6,7,8,9,10]
+N = 10
+A = [ i for i in range(1, N+1)]
+
+key = 55
+cnt = 0
+bit = [0]*N
+fcnt = 0
+f(0,N,0,key)
+print(cnt, fcnt)      # 합이 key인 부분집합의 수
+```
+
+## 순열2
+
+<aside>
+
+{1, 2, 3}을 순열로 만드는 방법
+
+**i = 0** : [1, 2, 3] j=0 → [**2**, **1**, 3] j=1 (i와 바꿈) → [**3**, 2, **1**] j=2 (i와 바꿈)
+
+**i = 1 (1)** : [1, 2, 3] j=1 → [1, **3**, **2**] j=2 (i와 바꿈)
+
+**i = 1 (2)** : [2, 1, 3] j=1 → [2, **3**, **1**] j=2 (i와 바꿈)
+
+**i = 1 (3)** : [3, 2, 1] j=1 → [3, **1**, **2**] j=2 (i와 바꿈)
+
+**i = 2 (1)** : [1, 2, 3] j=2
+
+… 모두 그대로임.
+
+총 6개가 나온다.
+
+</aside>
+
+```python
+def f(i, N):    # 크기가 N이고 순열을 저장한 p배열에서 p[i]를 결정하는 함수
+    if i == N:  #
+        print(p)
+    else:
+        for j in range(i, N):
+            p[i], p[j] = p[j], p[i]
+            f(i+1, N)   # i+1자리 결정
+            p[i], p[j] = p[j], p[i]
+
+p = [1, 2, 3]
+N = 3
+f(0, N)
+```
+
+### 순열 문제에서의 가지치기
+
+<aside>
+
+NxN 배열에 숫자가 들어있다. 한 줄에서 하나씩 N개의 숫자를 골라 합이 최소가 되도록 하려고 한다. 단, 세로로 같은 줄에서 두 개 이상의 숫자를 고를 수 없다.
+
+조건에 맞게 숫자를 골랐을 때의 최소 합을 출력하는 프로그램을 만드시오.
+
+예를 들어 다음과 같이 배열이 주어진다.
+
+2 1 2
+
+5 8 5
+
+7 2 2
+
+이 경우 1, 5, 2를 고르면 합이 8로 최소가 된다.
+
+</aside>
+
+이 문제는 완전 탐색으로 풀이 가능할 것이다.
+
+P[ ] 만들어, 각 행에서 고른 열 번호를 저장하는 리스트로 선정한다. (열 번호는 겹치면 안된다.)
+
+백트래킹과 순열 만드는 원리를 이용하면 아래와 같이 코드를 짜볼 수 있겠다.
+
+```python
+T = int(input())
+def f(i, N, s):    # 크기가 N이고 순열을 저장한 p배열에서 p[i]를 결정하는 함수
+    global min_v
+    if i == N:
+        min_v = min(min_v, s)
+
+    elif min_v < s:  # 중간 합계가 최소합보다 크면
+        return
+
+    else:
+        for j in range(i, N):
+            p[i], p[j] = p[j], p[i]     # 자리 교환
+            f(i+1, N, s + arr[i][p[i]])   # i+1자리 결정
+            p[i], p[j] = p[j], p[i]     # 원상 복구
+
+for test_case in range(1, T+1):
+    N = int(input())
+    arr = [list(map(int, input().split())) for _ in range(N)]
+
+    p = [i for i in range(N)]
+    min_v = 10000
+    f(0, N, 0)
+    print(f'#{test_case} {min_v}')
+```
