@@ -6,7 +6,7 @@
 
 ## Updates
 
-> **25-01-16** TIL 생성, [Markdown](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/Markdown.md), [CIL](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/CLI.md), [Git](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/Git.md), [Stack&Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack%20%26%20Queue.md) 추가
+> **25-01-16** TIL 생성, [Markdown](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/Markdown.md), [CIL](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/CLI.md), [Git](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/Git.md), [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md), [Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Queue.md) 추가
 
 > **25-01-17** [Git](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/Git.md) 수정, [ChatGPT](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/ChatGPT.md) 추가
 
@@ -38,13 +38,15 @@
 
 > **25-02-12** [String](https://github.com/2myunpaper/til/blob/master/Algorithm/String.md) 패턴 매칭 내용 추가
 
-> **25-02-13** [Stack&Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack%20%26%20Queue.md) 내용 추가
+> **25-02-13** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md) 내용 추가
 
-> **25-02-14** [Stack&Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack%20%26%20Queue.md) 내용 추가
+> **25-02-14** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md) 내용 추가
 
-> **25-02-17** [Stack&Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack%20%26%20Queue.md) Backtracking, 계산기 내용 추가
+> **25-02-17** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md) Backtracking, 계산기 내용 추가
 
-> **25-02-18** [Stack&Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack%20%26%20Queue.md) 순열, 가지치기 내용 추가
+> **25-02-18** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md) 순열, 가지치기 내용 추가
+
+> **25-02-19** [Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Queue.md) 내용 추가
 
 ## Year Plan (2025)
 

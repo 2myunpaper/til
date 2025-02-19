@@ -8,16 +8,6 @@ LIFO (Last In First Out) - 가장 마지막에 삽입된 데이터가 먼저 삭
 
 </aside>
 
-<aside>
-
-**큐 (Queue)**
-
-FIFO (First In First Out) - 가장 먼저 삽입된 데이터가 먼저 삭제되는 구조
-
-*ex) 너비 우선 탐색 (BFS) 알고리즘, 작업 스케줄링, 캐시 구현*
-
-</aside>
-
 ## 스택 (Stack)
 
 물건을 쌓아 올리듯 자료를 쌓아 올린 형태의 자료구조이다.
@@ -296,13 +286,13 @@ print(fibo1(n), cnt)  # 55 19
 
 <aside>
 
-Fi(n) 함수는 Fi(n-1)과 Fi(n-2)의 합
+`Fi(n)` 함수는 `Fi(n-1)`과 `Fi(n-2)`의 합
 
-Fi(n-1)dms Fi(n-2)과 Fi(n-3)의 합
+`Fi(n-1)` 은 `Fi(n-2)`과 `Fi(n-3)`의 합
 
 …
 
-Fi(n)은 Fi(n-1), Fi(n-2), …, Fi(2), Fi(1), Fi(0) 의 부분집합으로 나뉜다.
+`Fi(n)`은 `Fi(n-1)`, `Fi(n-2)`, …, `Fi(2)`, `Fi(1)`, `Fi(0)` 의 부분집합으로 나뉜다.
 
 </aside>
 
@@ -544,6 +534,65 @@ stack [ **-9** ]
 계산 결과 : **-9**
 
 </aside>
+
+```python
+'''
+(6+5*(2-8)/2)
+6528-*2/+
+'''
+stack = [0]*100
+top = -1
+icp = {'(':3, '*':2, '/':2, '+':1, '-':1}
+isp = {'(':0, '*':2, '/':2, '+':1, '-':1}
+
+fx = '(6+5*(2-8)/2)'
+susik = ''
+for x in fx:
+    if x not in '(+-*/)':   # 피연산자
+        susik += x
+    elif x == ')':      # '('까지 pop()
+        while stack[top] != '(':    # peek
+            susik += stack[top]
+            top -= 1
+        top -= 1        # '(' 버림. pop
+    else:   # '(+-*/'
+        if top==-1 or isp[stack[top]] < icp[x]: # 토큰의 우선순위가 더 높으면
+            top += 1    # push
+            stack[top] = x
+        elif isp[stack[top]] >= icp[x]:
+            while top > -1 and isp[stack[top]] >= icp[x]:
+                susik += stack[top]
+                top -= 1
+            top += 1  # push
+            stack[top] = x
+
+print(susik)
+
+#susik = '6528-*2/+'
+for x in susik:
+    if x not in '+-/*': # 피연산자면...
+        top += 1            # push(x)
+        stack[top] = int(x)
+    else:
+        op2 = stack[top]  # pop()
+        top -= 1
+        op1 = stack[top]  # pop()
+        top -= 1
+        if x=='+':  # op1 + op2
+            top += 1                # push()
+            stack[top] = op1 + op2
+        elif x=='-':
+            top += 1
+            stack[top] = op1 - op2
+        elif x=='/':
+            top += 1
+            stack[top] = op1 / op2
+        elif x=='*':
+            top += 1
+            stack[top] = op1 * op2
+
+print(stack[top])
+```
 
 ## 백트래킹
 
