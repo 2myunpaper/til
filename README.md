@@ -40,13 +40,15 @@
 
 > **25-02-13** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md) 내용 추가
 
-> **25-02-14** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md) 내용 추가
+> **25-02-14** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md) DFS 내용 추가
 
 > **25-02-17** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md) Backtracking, 계산기 내용 추가
 
 > **25-02-18** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md) 순열, 가지치기 내용 추가
 
 > **25-02-19** [Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Queue.md) 내용 추가
+
+> **25-02-20** [Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Queue.md) BFS 내용 추가
 
 ## Year Plan (2025)
 

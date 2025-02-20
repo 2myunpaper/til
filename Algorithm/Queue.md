@@ -338,3 +338,115 @@ FIFO 순서가 아니라 **우선순위가 높은 순서대로 먼저 나가게 
 A, P, S, enter 순 대로 입력을 받았다면,
 
 프로그램에서는 입력 받은 순서대로 A, P, S enter에 해당되는 출력이 진행되어야 한다.
+
+## BFS (Breadth First Search)
+
+너비우선탐색은 탐색 시작점의 인접한 정점들을 먼저 모두 차례로 방문한 후에, 방문했던 정점을 시작점으로 하여 다시 인접한 정점들을 차례로 방문하는 방식.
+
+인접한 정점들에 대해 탐색을 한 후, 차례로 다시 너비 우선탐색을 진행해야 하므로,
+
+선입선출 형태의 자료구조인 큐를 활용함
+
+<aside>
+
+*ex)*
+
+A
+
+[ B C D ]
+
+[ E F ] [ ] [ G H I ]
+
+→ A, B, C, D, E, F, G, H, I 순으로 탐색하게 됨.
+
+</aside>
+
+```python
+def BFS(G, v):  # 그래프 G, 탐색 시작점 v
+    visited = [0] * (n + 1)     # n : 정점의 개수
+    queue = []                  # 큐 생성
+    queue.append(v)             # 시작점 v를 큐에 삽입
+    while queue:                # 큐가 비어있지 않은 경우
+        t = queue.pop(0)        # 큐의 첫번째 원소 반환
+        if not visited[t] :     # 방문되지 않은 곳이라면
+            visited[t] = True   # 방문한 것으로 표시
+            visit(t)            # 정점 t에서 할 일
+            for i in G[t]:      # t와 연결된 모든 정점에 대해
+                if not visited[i]:  # 방문되지 않은 곳이라면
+                    queue.append(i) # 큐에 넣기
+```
+
+*BFS는 목표점까지 최소한 1개를 지날 경우, 최소한 2개를 지날 경우 … 를 순서대로 조사하는 방법이나 다름없다.*
+
+### 연습문제
+
+<aside>
+
+연결되어 있는 두 개의 정점 사이의 간선을 순서대로 나열 해 놓은 것이다. 모든 정점을 너비우선탐색 하여 경로를 출력하시오. 시작 정점을 1로 시작하시오.
+
+→ 인접하는 점 정보 입력: 1, 2, 1, 3, 2, 4, 2, 5, 4, 6, 5, 6, 6, 7, 3, 7
+
+</aside>
+
+인접 리스트를 생성한다.
+
+```python
+'''
+adj = [
+    [],         # 0번행
+    [2, 3],     # 1번행 - 1 정접과 이웃하는 정점
+    [1, 4, 5],  # 2번행 - 2 정점과 이웃하는 정점
+    ...         # n번행 - n 정점과 이웃하는 정점
+]
+'''
+
+adj_l = [[] for _ in range(V+1)]
+for i in range(E):
+    v1, v2 = arr[i*2], arr[i*2+1]
+    adj_l[v1].append(v2)
+    adj_l[v2].append(v1)    # 방향이 없는 경우
+```
+
+<aside>
+
+NxN 크기의 미로에서 출발지 목적지가 주어진다.
+
+이때 최소 몇개의 칸ㅇ르 지나면 출발지에서 도착지에 다다를 수 있는지 알아내는 프로그램을 작성하시오.
+
+경로가 있는 경우 출발에서 도착까지 간느데 지나야 하는 최소한의 칸 수를, 경로가 없는 경우 0을 출력한다.
+
+</aside>
+
+```python
+def bfs(i, j, N):
+    # 준비
+    visited = [[0]*N for _ in range(N)] # visited 생성
+    q = []      # 큐생성
+    q.append([i,j])# 시작점 인큐
+    visited[i][j] = 1# 시작점 인큐 표시
+    # 탐색
+    while q:
+        ti, tj = q.pop(0)   # 디큐
+        if maze[ti][tj] == 3:   # visit(t)
+            return visited[ti][tj] - 1 - 1 # 경로의 빈칸 수, -1 추가
+        for di, dj in [[0,1],[1,0],[0,-1],[-1,0]]: # 미로내부고, 인접이고 벽이아니면,
+            wi, wj = ti+di, tj+dj
+            if 0<=wi<N and 0<=wj<N and maze[wi][wj] != 1 and visited[wi][wj] == 0:
+                # 미로를 벗어나지 않고, 벽이 아니고,
+                q.append([wi, wj])# 인큐
+                visited[wi][wj] = visited[ti][tj] + 1   # 인큐 표시
+    return 0
+
+def find_start(N):
+    for i in range(N):
+        for j in range(N):
+            if maze[i][j] == 2:
+                return i, j
+
+N = int(input())
+maze = [list(map(int, input())) for _ in range(N)]
+sti, stj = find_start(N)
+ans = bfs(sti, stj, N)
+print(ans)
+
+```
