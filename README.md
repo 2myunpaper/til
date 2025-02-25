@@ -50,6 +50,8 @@
 
 > **25-02-20** [Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Queue.md) BFS 내용 추가
 
+> **25-02-25** [CSS_Layout](https://github.com/2myunpaper/til/blob/master/Web/CSS_Layout.md) 추가
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
