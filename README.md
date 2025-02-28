@@ -34,7 +34,7 @@
 
 > **25-02-10** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/List.md) 내용 추가(검색, 이진탐색, 선택 정렬)
 
-> **25-02-11** [String](https://github.com/2myunpaper/til/blob/master/Algorithm/String.md), [01_컴퓨터구조시작하기](https://github.com/2myunpaper/til/blob/master/CS/%ED%98%BC%EC%9E%90%ED%95%98%EB%8A%94%EC%BB%B4%EA%B5%AC%EC%9A%B4%EC%B2%B4/01_%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B5%AC%EC%A1%B0%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.md) 추가
+> **25-02-11** [String](https://github.com/2myunpaper/til/blob/master/Algorithm/String.md), [01_컴퓨터구조시작하기](https://github.com/2myunpaper/til/blob/master/CS/혼자하는컴구운체/01_컴퓨터구조시작하기.md) 추가
 
 > **25-02-12** [String](https://github.com/2myunpaper/til/blob/master/Algorithm/String.md) 패턴 매칭 내용 추가
 
@@ -56,7 +56,7 @@
 
 > **25-02-27** [ResponsiveWeb](https://github.com/2myunpaper/til/blob/master/Web/ResponsiveWeb.md) 추가
 
-> **25-02-28** [PJT02(반응형_웹페이지)](https://github.com/2myunpaper/til/blob/master/관통프로젝트_도서사이트/PJT02(반응형_웹페이지).md) 추가
+> **25-02-28** [PJT02(반응형_웹페이지)](https://github.com/2myunpaper/til/blob/master/관통프로젝트_도서사이트/PJT02(반응형_웹페이지).md) 추가, [02_데이터](https://github.com/2myunpaper/til/blob/master/CS/혼자하는컴구운체/02_데이터.md) 추가, [03_명령어](https://github.com/2myunpaper/til/blob/master/CS/혼자하는컴구운체/03_명령어.md) 추가
 
 ## Year Plan (2025)
 
