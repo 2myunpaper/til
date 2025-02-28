@@ -6,13 +6,13 @@
 
 ## Updates
 
-> **25-01-16** TIL 생성, [Markdown](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/Markdown.md), [CIL](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/CLI.md), [Git](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/Git.md), [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md), [Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Queue.md) 추가
+> **25-01-16** TIL 생성, [Markdown](https://github.com/2myunpaper/til/blob/master/Dev_Enviornment/Markdown.md), [CIL](https://github.com/2myunpaper/til/blob/master/Dev_Enviornment/CLI.md), [Git](https://github.com/2myunpaper/til/blob/master/Dev_Enviornment/Git.md), [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md), [Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Queue.md) 추가
 
 > **25-01-17** [Git](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/Git.md) 수정, [ChatGPT](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/ChatGPT.md) 추가
 
 > **25-01-20** [Python_Basic_Syntax_1](https://github.com/2myunpaper/til/blob/master/Python/Basic_Syntax/Basic_Syntax_01.md) 추가
 
-> **25-01-21** [Python_Basic_Syntax_2](https://github.com/2myunpaper/til/blob/master/Python/Basic_Syntax/Basic_Syntax_02.md) 추가, [Markdown](https://github.com/2myunpaper/til/blob/master/Dev%20Enviornment/Markdown.md) 수정
+> **25-01-21** [Python_Basic_Syntax_2](https://github.com/2myunpaper/til/blob/master/Python/Basic_Syntax/Basic_Syntax_02.md) 추가, [Markdown](https://github.com/2myunpaper/til/blob/master/Dev_Enviornment/Markdown.md) 수정
 
 > **25-01-22** [Python_Functions](https://github.com/2myunpaper/til/blob/master/Python/Functions.md) 추가, [Python_Basic_Syntax_2](https://github.com/2myunpaper/til/blob/master/Python/Basic_Syntax/Basic_Syntax_02.md) shallow copy, deep copy 부분 수정
 
