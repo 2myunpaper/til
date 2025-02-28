@@ -56,6 +56,8 @@
 
 > **25-02-27** [ResponsiveWeb](https://github.com/2myunpaper/til/blob/master/Web/ResponsiveWeb.md) 추가
 
+> **25-02-28** [PJT02(반응형_웹페이지)](https://github.com/2myunpaper/til/blob/master/관통프로젝트/PJT02(반응형_웹페이지).md) 추가
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
