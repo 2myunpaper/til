@@ -60,6 +60,8 @@
 
 > **25-03-04** [Tree](https://github.com/2myunpaper/til/blob/master/Algorithm/Tree.md) 추가
 
+> **25-03-05** [Tree](https://github.com/2myunpaper/til/blob/master/Algorithm/Tree.md) 내용 추가 (이진 탐색 트리, 힙)
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
