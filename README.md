@@ -26,29 +26,29 @@
 
 > **25-02-04** [Python_OOP_2(+Exceptions)](https://github.com/2myunpaper/til/blob/master/Python/OOP/OOP_2(+Exceptions).md), [Redis](https://github.com/2myunpaper/til/blob/master/Dev_Enviornment/Redis.md) 추가
 
-> **25-02-05** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/List.md) 추가
+> **25-02-05** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/Basic/List.md) 추가
 
-> **25-02-06** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/List.md) 내용 추가(카운팅 정렬, Greedy)
+> **25-02-06** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/Basic/List.md) 내용 추가(카운팅 정렬, Greedy)
 
-> **25-02-07** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/List.md) 내용 추가(2차원 배열, Delta, 비트 연산자 등)
+> **25-02-07** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/Basic/List.md) 내용 추가(2차원 배열, Delta, 비트 연산자 등)
 
-> **25-02-10** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/List.md) 내용 추가(검색, 이진탐색, 선택 정렬)
+> **25-02-10** [List](https://github.com/2myunpaper/til/blob/master/Algorithm/Basic/List.md) 내용 추가(검색, 이진탐색, 선택 정렬)
 
-> **25-02-11** [String](https://github.com/2myunpaper/til/blob/master/Algorithm/String.md), [01_컴퓨터구조시작하기](https://github.com/2myunpaper/til/blob/master/CS/혼자하는컴구운체/01_컴퓨터구조시작하기.md) 추가
+> **25-02-11** [String](https://github.com/2myunpaper/til/blob/master/Algorithm/Basic/String.md), [01_컴퓨터구조시작하기](https://github.com/2myunpaper/til/blob/master/CS/혼자하는컴구운체/01_컴퓨터구조시작하기.md) 추가
 
-> **25-02-12** [String](https://github.com/2myunpaper/til/blob/master/Algorithm/String.md) 패턴 매칭 내용 추가
+> **25-02-12** [String](https://github.com/2myunpaper/til/blob/master/Algorithm/Basic/String.md) 패턴 매칭 내용 추가
 
-> **25-02-13** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md) 내용 추가
+> **25-02-13** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Basic/Stack.md) 내용 추가
 
-> **25-02-14** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md) DFS 내용 추가
+> **25-02-14** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Basic/Stack.md) DFS 내용 추가
 
-> **25-02-17** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md) Backtracking, 계산기 내용 추가
+> **25-02-17** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Basic/Stack.md) Backtracking, 계산기 내용 추가
 
-> **25-02-18** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Stack.md) 순열, 가지치기 내용 추가
+> **25-02-18** [Stack](https://github.com/2myunpaper/til/blob/master/Algorithm/Basic/Stack.md) 순열, 가지치기 내용 추가
 
-> **25-02-19** [Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Queue.md) 내용 추가
+> **25-02-19** [Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Basic/Queue.md) 내용 추가
 
-> **25-02-20** [Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Queue.md) BFS 내용 추가
+> **25-02-20** [Queue](https://github.com/2myunpaper/til/blob/master/Algorithm/Basic/Queue.md) BFS 내용 추가
 
 > **25-02-25** [CSS_Layout](https://github.com/2myunpaper/til/blob/master/Web/CSS_Layout.md) 추가
 
@@ -58,11 +58,11 @@
 
 > **25-02-28** [PJT02(반응형_웹페이지)](https://github.com/2myunpaper/til/blob/master/관통프로젝트_도서사이트/PJT02(반응형_웹페이지).md) 추가, [02_데이터](https://github.com/2myunpaper/til/blob/master/CS/혼자하는컴구운체/02_데이터.md) 추가, [03_명령어](https://github.com/2myunpaper/til/blob/master/CS/혼자하는컴구운체/03_명령어.md) 추가
 
-> **25-03-04** [Tree](https://github.com/2myunpaper/til/blob/master/Algorithm/Tree.md) 추가
+> **25-03-04** [Tree](https://github.com/2myunpaper/til/blob/master/Algorithm/Basic/Tree.md) 추가
 
-> **25-03-05** [Tree](https://github.com/2myunpaper/til/blob/master/Algorithm/Tree.md) 내용 추가 (이진 탐색 트리, 힙)
+> **25-03-05** [Tree](https://github.com/2myunpaper/til/blob/master/Algorithm/Basic/Tree.md) 내용 추가 (이진 탐색 트리, 힙)
 
-> **25-03-06** [Algorithm](https://github.com/2myunpaper/til/blob/master/Algorithm) 폴더 정리
+> **25-03-06** [Algorithm](https://github.com/2myunpaper/til/blob/master/Algorithm) 폴더 정리, [Start](https://github.com/2myunpaper/til/blob/master/Algorithm/Advanced/Start.md) 추가
 
 ## Year Plan (2025)
 
