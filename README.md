@@ -64,6 +64,8 @@
 
 > **25-03-06** [Algorithm](https://github.com/2myunpaper/til/blob/master/Algorithm) 폴더 정리, [Start](https://github.com/2myunpaper/til/blob/master/Algorithm/Advanced/Start.md) 추가
 
+> **25-03-11** [Computing_Thinking](https://github.com/2myunpaper/til/blob/master/Algorithm/Advanced/Computing_Thinking.md) 추가
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
