@@ -66,6 +66,8 @@
 
 > **25-03-11** [Computing_Thinking](https://github.com/2myunpaper/til/blob/master/Algorithm/Advanced/Computing_Thinking.md) 추가
 
+> **25-03-17** [Greedy](https://github.com/2myunpaper/til/blob/master/Algorithm/Advanced/Greedy.md), [Divide&Conquer](https://github.com/2myunpaper/til/blob/master/Algorithm/Advanced/Divide&Conquer.md) 추가
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
