@@ -71,7 +71,9 @@
 > **25-03-19** [Graph](https://github.com/2myunpaper/til/blob/master/Algorithm/Advanced/Graph.md) 추가
 
 > **25-03-26** [04_CPU의작동원리](https://github.com/2myunpaper/til/blob/master/CS/혼자하는컴구운체/04_CPU의작동원리.md), [05_CPU성능향상기법](https://github.com/2myunpaper/til/blob/master/CS/혼자하는컴구운체/05_CPU성능향상기법.md), [Django](https://github.com/2myunpaper/til/blob/master/Web/Django) 추가
- 
+
+> **25-03-27** [ORM](https://github.com/2myunpaper/til/blob/master/Web/Django/ORM.md) 추가, [Template-URLs](https://github.com/2myunpaper/til/blob/master/Web/Django/Template-URLs.md) 수정
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격

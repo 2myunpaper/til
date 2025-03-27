@@ -508,7 +508,18 @@ url을 작성하는 모든 곳에서 변경
       <a href="{% url 'articles:throw' %}">throw</a>
     {% endblock content %}
     ```
-    
+
+*만약 Path가 `‘<str:work>’` 이런 식으로 되어 있다면,*
+
+*URL태그를 쓸 때 `work` 가 어느 값이 들어가지는 지도 정보를 기입해야 한다.*
+
+```html
+{% if work %}
+  <li><a href="{% url 'todos:detail' work=work %}">{{ work }}</a></li>
+{% else %}
+  <li>아직 할 일이 없습니다.</li>
+{% endif %}
+```
 
 ## 참고
 
@@ -579,3 +590,7 @@ Django는 URL 끝에 ‘/’가 없다면 자동으로 붙인다.
 Django는 검색 엔진이 혼동하지 않게 하기 위해 무조건 붙이는 것을 선택한다.
 
 그러나 모든 프레임워크가 이렇게 동작하는 것은 아니니 주의하자
+
+### Template 태그 그 외
+
+[Django 기초 - Template Language](https://velog.io/@jewon119/Django-%EA%B8%B0%EC%B4%88-Template-Language)
