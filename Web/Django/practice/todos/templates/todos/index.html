@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+할 일 목록
+{% endblock title %}
+
+{% block content %}
+<h1>할 일 목록</h1>
+    <hr>
+    <ul>
+        {% if todos|length == 0 %}
+            <li>아직 할 일이 없습니다.</li>
+        {% endif %}
+        {% for todo in todos %}
+            <li>
+                <input type="checkbox" {% if todo.is_completed == 1 %}checked{% endif %}>
+                <a href="{% url "todos:detail" todo_pk=todo.pk %}">{{ todo.work }}</a>
+            </li>
+            <hr>
+        {% endfor %}
+    </ul>
+{% endblock content %}

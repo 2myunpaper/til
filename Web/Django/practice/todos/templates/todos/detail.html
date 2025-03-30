@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+할 일 세부 사항
+{% endblock title %}
+
+{% block content %}
+<h1>할 일 세부 사항</h1>
+<hr>
+<p>할 일 : {{ todo.work }}</p>
+<p>내 용 : {{ todo.content }}</p>
+<p>생성 일시 : {{ todo.created_at }}</p>
+<p>수정 일시 : {{ todo.updated_at }}</p>
+<p>완료 상태 : {{ todo.is_completed }}</p>
+
+<form action="{% url "todos:edit_todo" todo_pk=todo.pk %}">
+    <input type="submit" value="수정">
+</form>
+<form action="{% url "todos:delete_todo" todo_pk=todo.pk %}">
+    <input type="submit" value="삭제">
+</form>
+<hr>
+{% endblock content %}
