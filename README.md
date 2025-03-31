@@ -76,6 +76,8 @@
 
 > **25-03-30** [Django_practice_todolist](https://github.com/2myunpaper/til/blob/master/Web/Django/practice) 추가
 
+> **25-03-31** [ORMwithView](https://github.com/2myunpaper/til/blob/master/Web/Django/ORMwithView.md), [Form](https://github.com/2myunpaper/til/blob/master/Web/Django/Form.md) 추가
+
 ## Year Plan (2025)
 
 - SW역량테스트 A형 이상 합격
