@@ -78,10 +78,4 @@
 
 > **25-03-31** [ORMwithView](https://github.com/2myunpaper/til/blob/master/Web/Django/ORMwithView.md), [Form](https://github.com/2myunpaper/til/blob/master/Web/Django/Form.md) 추가
 
-## Year Plan (2025)
-
-- SW역량테스트 A형 이상 합격
-- 프로젝트 기획 및 구현 최소 3번
-- 구체적 희망 직종 결정하기
-- SQLD 등 데이터 관련 자격증 따기
-- 어학 시험 최소 2번 응시하기
+> **26-01-04~계속** [Algorithm_prac](./Algorithm/prac/)
